@@ -11,7 +11,7 @@ docker network create tor
 tordns will resolve your .onion quries and it out of the box does not need any configurating. \
 You can check logs to see responses for more Check on [DockerHUB](https://hub.docker.com/repository/docker/amjiddader/tordns) \
 ```
-docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --network tor --dns 1.1.1.1 - amjiddader/tordns
+docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --network tor --dns 1.1.1.1  amjiddader/tordns
 ```
 
 ## 2 TOR Search Engine. 
