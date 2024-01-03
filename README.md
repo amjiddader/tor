@@ -15,8 +15,7 @@ docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --networ
 ```
 Check IP of tordns in case you dont use network and want to use tordns dns in same server but on new docker network and container .
 ```
-docker inspect -f '{{.NetworkSettings.Networks.your_network.IPAddress}}' tordns
-
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}'  tordns
 ```
 
 ## 2 TOR Search Engine. 
