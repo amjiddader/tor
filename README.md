@@ -13,6 +13,11 @@ You can check logs to see responses for more Check on [DockerHUB](https://hub.do
 ```
 docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --network tor --dns 1.1.1.1  amjiddader/tordns
 ```
+Check IP of tordns in case you dont use network and want to use tordns dns in same server but on new docker network and container .
+```
+docker inspect -f '{{.NetworkSettings.Networks.your_network.IPAddress}}' tordns
+
+```
 
 ## 2 TOR Search Engine. 
 yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server) ) 
