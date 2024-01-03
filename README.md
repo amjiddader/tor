@@ -10,5 +10,5 @@ docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --dns 1.
 
 
 ## 2 TOR Search Engine. 
-yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server) )
+yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server) ) \
 docker run -d --name torsearch -p 8090:8090 -v /home/search/data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
