@@ -5,9 +5,9 @@ Warning: I do not endorse anyone to use Darkweb as it is very serious and denger
 
 ## 1 TOR DNS RESOLVER 
 tordns will resolve your .onion quries and it out of the box does not need any configurating. \
-You can check logs to see responses for more Check on [DockerHUB](https://hub.docker.com/repository/docker/amjiddader/tordns)https://hub.docker.com/repository/docker/amjiddader/tordns \
+You can check logs to see responses for more Check on [DockerHUB](https://hub.docker.com/repository/docker/amjiddader/tordns) \
 docker run --name tordns --restart=always -dit -p 127.0.0.9:53:5353/udp --dns 1.1.1.1 - amjiddader/tordns
 
 
 ## 2 TOR Search Engine. 
-yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server)https://github.com/yacy/yacy_search_server )
+yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server) )
