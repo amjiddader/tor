@@ -42,5 +42,5 @@ docker run -d --name torsearch -p 8090:8090 -v /home/search/data:/opt/yacy_searc
 ```
 As anove docker image i make this privete and i many not update this i recommend using below.
 ```
-docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 --dns 127.0.0.9  --dns 127.0.0.9  --network tor -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
+docker run -d --name yacy_search_server -p 8090:8090 -p 8443:8443 --dns 127.0.0.9  --dns 127.0.0.8  -v yacy_search_server_data:/opt/yacy_search_server/DATA --restart unless-stopped --log-opt max-size=200m --log-opt max-file=2 yacy/yacy_search_server:latest
 ```
