@@ -34,6 +34,11 @@ Check IP of tordns in case you dont use network and want to use tordns dns in sa
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}'  tordns
 ```
 
+In case you want to reset or purne everything related to docker 
+```
+docker system prune -af
+```
+
 ## 2 TOR Search Engine. 
 yacy_search_server [Availabel on Github](https://github.com/yacy/yacy_search_server) ) 
 
