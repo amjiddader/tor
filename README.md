@@ -8,6 +8,22 @@ Make sure you create a newtwork if you want to use another doecker on same syste
 ```
 docker network create tor
 ```
+Here is the beta and its faster than below.. \
+Choose 2 IPs of your local can be anything as long they are from local network i.e 127.0.x.x \
+Docker uses 4 resolvers   
+
+- 53 using DNSPort (tor)
+- 52 using DOH - Google 8.8.8.8
+- 51 using cloudflare dns-over-tls
+- 50 using cloudflare dns-over-tcp
+
+And insode Docker port 54 used as local dns server to listen for /dns-query 
+So it will resolve all kind of requests. 
+  
+```
+docker run -d -p 127.0.0.9:53:54/udp -p 127.0.0.8:53:54/udp  --restart=always  --name tor-dns amjiddader/tordns:beta 
+```
+
 tordns will resolve your .onion quries and it out of the box does not need any configurating. \
 You can check logs to see responses for more Check on [DockerHUB](https://hub.docker.com/repository/docker/amjiddader/tordns) \
 ```
